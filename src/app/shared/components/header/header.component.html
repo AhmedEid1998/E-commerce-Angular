@@ -1,0 +1,35 @@
+
+<nav class="fixed-top">
+    <div class="container">
+        <div class="content">
+
+            <h2 class="logo" routerLink="/products">Market</h2>
+
+
+            <div class="hamburger">
+                <div *ngIf="isLogin" class="line l1"></div>
+                <div *ngIf="isLogin" class="line l2"></div>
+                <div *ngIf="isLogin" class="line l3"></div>
+            </div>
+
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="nav-bar" *ngIf="isLogin">
+                    <ul >
+                        <li routerLinkActive="active" routerLink="/products">Products</li>
+                        <li class="position-relative" routerLinkActive="active" routerLink="/cart">Cart</li>
+                    </ul>    
+                </div>
+    
+                <ul  class="regist">
+                    <li *ngIf="isLogin" routerLink="/login" (click)="calLogout()">Logout</li>
+                    <li *ngIf="!isLogin" routerLinkActive="active" routerLink="/login">Login</li>
+                    <li *ngIf="!isLogin" routerLinkActive="active" routerLink="/register">Register</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+</nav>
+
+

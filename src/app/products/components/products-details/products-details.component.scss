@@ -1,0 +1,36 @@
+.box{
+    width: 90%;
+    margin: 100px auto;
+    height: 500px;
+
+    strong{
+        color: #950b0b !important;
+        // #440606
+    }
+
+    ul{
+        li{
+            font-size: 22px;
+            margin: 20px 0;
+            color: #440606;
+        }
+    }
+    img{
+        width: 100%;
+        max-height: 490px;
+        min-height: 500px;
+    }
+    .marg{
+        margin-bottom: 110px !important;
+    }
+}
+
+
+@media only screen and (max-width: 900px){
+
+    img{
+        max-height: auto !important;
+        width: 50%;
+    }
+
+}
