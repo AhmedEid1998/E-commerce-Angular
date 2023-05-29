@@ -2,8 +2,8 @@
     <div routerLink="/details/{{data.id}}" >
         <img [src]="data.image" alt="">
         <div class="body">
-            <h4>{{data.title}}</h4>
-            <p>{{data.description}}</p>
+            <h4>{{data.title | slice:0:50}}</h4>
+            <p>{{data.description | slice:0:50}}</p>
         </div>
     </div>
 
@@ -11,7 +11,8 @@
         <button class="btn btn-success" *ngIf="!addBtn" (click)="addBtn=true">Add To cart</button>
         <div class="d-flex w-50" *ngIf="addBtn">
             <input type="number" class="form-control w-50" [(ngModel)]="amount">
-            <button class="btn btn-danger w-50 mx-1" (click)="add() ; addBtn=false">Add</button>        </div>
+            <button class="btn btn-danger w-50 mx-1" (click)="add() ; addBtn=false">Add</button>        
+        </div>
         <span>{{data.price}} $</span>
     </div>
 </div>
