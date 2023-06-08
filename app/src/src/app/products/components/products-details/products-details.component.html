@@ -1,0 +1,28 @@
+
+
+
+<div class="box " *ngIf="!loading">
+    <div class="row ">
+        <div class="col-lg-5 mb-5">
+            <img [src]="data.image" alt="">
+        </div>
+        <div class="col-lg-6 marg offset-1">
+            <div class="info ">
+                <ul class="list-unstyled">
+                    <li><strong>Title :</strong> {{data.title}}</li>
+                    <li><strong>Category :</strong> {{data.category}}</li>
+                    <li><strong>Description :</strong> {{data.description}}</li>
+                    <li><strong>Rate :</strong> {{data.rating.rate}}</li>
+                    <li><strong>Count :</strong> {{data.rating.count}}</li>
+                    <li><strong>Price :</strong> {{data.price}} $</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="loading" class="mt-5 pt-5">
+    <app-spinner></app-spinner>
+    
+</div>
