@@ -34,3 +34,21 @@
     }
 
 }
+
+.active{
+    background-color: rgb(215, 207, 207);
+}
+
+.links{
+    color: #440606 !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    .product{
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover{
+            background-color: rgb(215, 207, 207);
+        }
+    }
+}
