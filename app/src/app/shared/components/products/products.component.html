@@ -1,0 +1,23 @@
+<div class="item p-3 position-relative">
+    <img [src]="data.image">
+    <div class="cntnt p-3 d-flex justify-content-center align-items-center">
+        <div class="text-center">
+            <div >
+                <div class="body">
+                    <h4 class="rounded-5 text-center d-flex justify-content-center align-items-center"><div>{{data.title | slice:0:50}}</div></h4>
+                    <p>{{data.description | slice:0:50}}</p>
+                </div>
+            </div>
+        
+            <div class="px-3 mb-2 d-flex justify-content-between align-items-center">
+                <button class="adSccs py-1 px-2" *ngIf="!addBtn" (click)="addBtn=true">Add To cart</button>
+                <div class="d-flex w-50" *ngIf="addBtn">
+                    <input type="number" class="form-control w-50" [(ngModel)]="amount">
+                    <button class="adDngr btn btn-danger w-50 mx-1" (click)="add() ; addBtn=false">Add</button>        
+                </div>
+                <span>{{data.price}} $</span>
+            </div>
+            <button class=" mt-2 dtls py-1 px-2"  routerLink="/details/{{data.id}}">Details</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,126 @@
+
+
+nav{
+    background: linear-gradient(to right, #950b0b, #440606 );
+    color: #fff;
+
+    .content{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 5px 0;
+
+        .logo{
+            cursor: pointer;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            // width: 10%;
+            margin: 0;
+            li{
+                cursor: pointer;
+                font-size: 22px;
+                color: #fff;
+                text-decoration: none;
+                margin-left: 10px;
+                padding: 3px 6px;
+                border-radius: 10px;
+                transition: 0.3s ease;
+            }
+
+            li:hover{
+                color: #440606 !important;
+                background-color: rgb(215, 207, 207);
+            }
+        }
+
+        .regist{
+            width: 15% !important;
+        }
+
+        .active{
+            color: #440606 !important;
+            background-color: rgb(215, 207, 207);
+        }
+    }
+
+
+    .hamburger{
+        display: none;
+    }
+
+
+
+
+    @media only screen  and (max-width: 900px) {
+        .hamburger{
+            display: block;
+            cursor: pointer;
+            transition: 1s !important;
+        }    
+        .hamburger .line{
+            width: 30px;
+            height: 3px;
+            background: white;
+            margin: 6px 0;
+            transition: 0.3s ease;
+        }
+        .hamburger:hover .line{
+            background-color: rgb(215, 207, 207);
+        }
+        .l1x{
+            transform: translateX(15%);
+        }
+        .l2x{
+            transform: translateX(-15%);
+        }
+        .l3x{
+            transform: translateX(15%);
+        }
+    
+    
+        
+        .nav-bar{
+            height: 0;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to right, #950b0b, #440606 );
+            width: 70%;
+            margin: auto;
+            border-radius: 25px;
+            transition: 0.3s ease;
+            overflow: hidden;
+        }
+    
+        .nav-bar ul{
+            display: none;
+            padding-top: 20px;
+            position: absolute;
+        }
+    
+    
+        .nav-bar ul li {
+            margin-bottom: 12px;
+            transition: 0.5s ease;
+        }
+        .nav-bar ul li:hover{
+            background-color: rgb(215, 207, 207) !important;
+            border-radius: 10px;
+        }
+    
+        .nav-bar.clicked{
+            height: 130px;
+        }
+    
+        .nav-bar.clicked ul {
+            display: block;
+        }
+    
+    }
+
+}

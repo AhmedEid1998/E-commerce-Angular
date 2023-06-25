@@ -1,0 +1,103 @@
+
+<div class="mainPop">
+    <div class="popUp">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-3 ">
+                    <div class="text-center p-4">
+                        <img class="imageP rounded-4" src="">
+                        <p class="h2P h2 mt-2 text-center bg-dark p-2 rounded-4"></p>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 offset-lg-1 d-flex justify-content-start align-items-center">
+                    <div class="infoP text-center p-4 w-100">
+                        <ul class="list-unstyled ">
+                            <li class="bg-dark p-2 rounded-4 text-center"><strong>Category : </strong> <span class="categP text-capitalize"></span> </li>
+                            <li class="bg-dark p-2 rounded-4 text-center"><strong>Quantity : </strong> <span class="qunttP text-capitalize"></span> </li>
+                            <li class="bg-dark p-2 rounded-4 text-center"><strong>Price : </strong> <span class="pricP text-capitalize"></span> </li>
+                            <li class="bg-dark p-2 rounded-4 text-center"><strong>Total Price : </strong> <span class="totlPricP text-capitalize"></span> </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+
+        </div>
+        <div class="popUpIcon" (click)="exit()">
+            <i class="fa-solid fa-xmark" ></i>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<div class="alert alert-danger mt-5 h4" *ngIf="dontHaveProducts">
+    You don't have any products in your cart !
+</div>
+
+<div class="cartBox marg py-3">
+    <div class="vot"><h1 class="h2">Shopping Cart</h1></div>
+    <div class="headCart mt-5">
+        <p class="lead p-2  text-center">You Have 
+            <label for="" class="">{{cartProducts.length}}</label>
+            Items In Your cart
+        </p>
+        <span class="card-header text-danger py-2 px-3 rounded-5 text-center" (click)="clearData()">Clear Shopping Cart</span>
+    </div>
+
+    <div class="row cart-row p-1 rounded-5 mt-5" *ngFor="let product of cartProducts let index = index let isEven = even"
+                            [style.backgroundColor]="isEven?'#efebeb':''">
+
+        <div class="col-lg-4 my-2 d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-center align-items-center w-100">
+                <img [src]="product.item.image">
+
+            </div>
+        </div>
+
+        <div class="col-lg-4 my-2 d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-around align-items-center w-100">
+                <div>
+                    <p class="my-0 mb-2 fw-bolder text-center text-danger">QUANTITY</p>
+                    <div class="quantity">
+                        <button class="btn rounded-3 pls" (click)="addAount(index)">+</button>
+                        <input type="number" class="form-control" (change)="detectChang();getTotalPrice()" [(ngModel)]="product.quantity">
+                        <button class="btn mins" (click)="minsAount(index)">-</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 my-2 d-flex justify-content-center align-items-center">
+            <div class="d-flex justify-content-around align-items-center w-100">
+
+                <button class="btn dtls" (click)="show(index)">Details</button>
+                <button class="btn btn-danger dlt" (click)="deleteProduct(index)">Delete</button>      
+            </div>
+        </div>
+
+    </div>
+
+    <div class="order mt-5 position-relative d-flex justify-content-around align-items-center my-3">
+        <div class="w-25">
+            <span class="fw-bolder text-danger mx-2">TOTAL:</span>
+            <span > {{total | number : '1.1-3'}} $</span>
+        </div>
+        <button class="btn btn-success ordr" (click)="orderNow()">Order Now</button>
+    </div>
+
+    <div class="alert alert-success my-3" role="alert" *ngIf="success">
+        <strong>Well Done !</strong>
+        Your Order Is Successfully Send
+    </div>
+
+    <button class="btn btn-primary" (click)="routerToMarket()">View Market</button>
+
+</div>
