@@ -37,6 +37,16 @@ export class HeaderComponent implements OnInit {
       $('.hamburger .l2').toggleClass('l2x')
       $('.hamburger .l3').toggleClass('l3x')
     })
+
+    window.onscroll = ()=>{
+      $('.nav-bar').removeClass('clicked')
+      $('.hamburger .line').removeClass('hamClr')
+      $('.hamburger .l1').removeClass('l1x')
+      $('.hamburger .l2').removeClass('l2x')
+      $('.hamburger .l3').removeClass('l3x')
+    }
+
+
   }
 }
 

@@ -125,11 +125,21 @@ export class CartComponent implements OnInit {
     $('.qunttP').html(this.popUpProducts.quantity)
     $('.pricP').html(`${this.popUpProducts.item.price} $`)
     $('.totlPricP').html(`${this.popUpProducts.item.price * this.popUpProducts.quantity} $`)
-    $('.mainPop').css({'display':'block'})
+    
+    $('.mainPop').slideDown((1000), () => {
+      $('.mainPop').css({'display':'flex'})
+      $('.popUp').slideDown(1000)
+    })
+
+
   }
 
   exit(){
-    $('.mainPop').css({'display':'none'})
+    $('.popUp').slideUp((1000), () => {
+      $('.mainPop').slideUp((1000), () => {
+        $('.mainPop').css({'display':'none'})
+      })
+    })
   }
 
 }
