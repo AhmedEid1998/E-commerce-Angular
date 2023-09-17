@@ -41,7 +41,7 @@ export class LoginComponent {
       console.log(response)
       if(response.message == 'success')
       {
-        this._Router.navigate(['/product'])
+        this._Router.navigate(['/products'])
         //token part
         localStorage.setItem('userToken',response.token)
         this._AuthService.setUserData();

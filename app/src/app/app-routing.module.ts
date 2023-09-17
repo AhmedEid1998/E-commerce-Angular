@@ -11,12 +11,28 @@ import { NotfoundComponent } from './shared/components/notfound/notfound.compone
 
 const routes: Routes = [
   { path: '', redirectTo: 'products', pathMatch: 'full' },
-  {path: 'products',canActivate: [AuthGuard], component: AllProductsComponent},
-  {path: 'details/:id', canActivate: [AuthGuard], component: ProductsDetailsComponent},
-  { path: 'cart', canActivate: [AuthGuard], component: CartComponent},
-  { path: 'register', canActivate: [LogGuard], component: RegisterComponent},
-  { path: 'login', canActivate: [LogGuard], component: LoginComponent},
-  { path: '**', component: NotfoundComponent},
+  {
+    path: 'products',
+    canActivate: [AuthGuard],
+    component: AllProductsComponent,
+  },
+  {
+    path: 'details/:id',
+    canActivate: [AuthGuard],
+    component: ProductsDetailsComponent,
+  },
+  { path: 'cart', canActivate: [AuthGuard], component: CartComponent },
+  { path: 'register', canActivate: [LogGuard], component: RegisterComponent },
+  { path: 'login', canActivate: [LogGuard], component: LoginComponent },
+  { path: '**', component: NotfoundComponent },
+
+  // { path: '', redirectTo: 'products', pathMatch: 'full' },
+  // {path: 'products', component: AllProductsComponent},
+  // {path: 'details/:id', component: ProductsDetailsComponent},
+  // { path: 'cart', component: CartComponent},
+  // { path: 'register', component: RegisterComponent},
+  // { path: 'login', component: LoginComponent},
+  // { path: '**', component: NotfoundComponent},
 ];
 
 @NgModule({
