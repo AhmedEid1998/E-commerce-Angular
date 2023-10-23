@@ -107,11 +107,13 @@
         top: -40px;
         left: 50%;
         transform: translateX(-50%);
-        background-color: #b71717;;
+        // background-color: #b71717;
+        background-color: #fff;
         border-radius: 25px;
         padding: 10px;
         h1{
-            color: #fff;
+            color: #b71717;
+            font-weight: normal;
         }
     }
     label{

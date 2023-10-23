@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    background: linear-gradient(to right, #950b0b, #440606 );
+    margin: 0 0 ;
+    padding: 10px 0;
+    .container{
+        // background: linear-gradient(to right, #950b0b, #440606 );
+        padding: 20px 20px;
+        // border: solid 1px gray;
+        
+        h3{
+            color: white;
+            cursor: context-menu;
+        }
+        ul{
+            margin-top: 10px;
+            li{
+                list-style: none;
+                margin-bottom: 10px;
+                cursor: pointer;
+                width: max-content;
+                color: white;
+                transition: 0.3s ease-in-out;
+                letter-spacing: 1px;
+                font-size: 1.2rem;
+                &:hover{
+                    color: rgb(215, 207, 207);
+                    transform: translateX(10px);
+                }
+            }
+        }
+        .copRigh{
+            p{
+                // background-color: red;
+                text-align: center;
+                font-size: 1.4rem;
+                color: white;
+                span{
+                    a{
+                        color: #6da7ff;
+                        transition: 0.2s ease-in-out;
+                        &:hover{
+                        color: #0d6efd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// footer{
+//     // background: linear-gradient(to right, rgba(149, 11, 11,0.3), rgba(68, 6, 6, 0.3) );
+//     background-color: transparent;
+//     position: fixed;
+//     bottom: 10px;
+//     left: 0;
+//     right: 0;
+//     text-align: center;
+
+//     a{
+//         transition: 0.5s ease;
+//         color: white;
+//     }
+//     a:hover{
+//         cursor: pointer;
+//         color: rgb(221, 177, 96);
+//     }
+//     .cprit a{
+//         letter-spacing: 5px;
+//         color: white;
+//         text-decoration: none;
+//         font-weight: bolder;
+//     }
+//     .cprit a:hover{
+//         color: rgb(221, 177, 96);
+//     }
+    
+//     div{
+//         margin: auto;
+//     }
+//     .cntnt{
+//         width: 50%;
+//         background: linear-gradient(to right, rgb(149, 11, 11), rgba(68, 6, 6) );
+//         color: white;
+//         border-radius: 20px;
+//     }
+// }
+
+
+// @media only screen  and (max-width: 900px) {
+    
+//     .cntnt{
+//         width: 90% !important;
+//     }
+// }

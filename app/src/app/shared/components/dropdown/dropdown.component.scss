@@ -1,0 +1,50 @@
+
+
+nav{
+    // background-color: green;
+    width: 80%;
+    margin: 70px auto 0 auto;
+    top: 0;
+    z-index: 3;
+    ul{
+        // background-color: red;
+        width: 100%;
+        margin: auto;
+        padding: 10px 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li{
+            list-style: none;
+            cursor: pointer;
+            // background-color: yellow;
+            border-top: solid 1px black;
+            border-bottom: solid 1px black;
+            width: 150px;
+            padding: 4px 7px;
+            transition: 0.3s ease-in-out;
+            text-align: center;
+            &:hover{
+                background-color: #950b0b,;
+                color: white;
+            }
+        }
+    }
+
+    
+}
+
+@media (max-width: 990px) {
+    nav{
+        ul{
+            li{
+                width: 100%;
+                border-left: solid 1px black;
+                // border-right: solid 0px black;
+                border-top: solid 0px black;
+                border-bottom: solid 0px black;
+            }
+        }
+    }
+  }

@@ -71,9 +71,16 @@ export class AllProductsComponent implements OnInit {
   }
 
   //filter products by category
+  // filterCategory(event:any){
+  //   let value = event.target.value;
+  //   (value == 'all')?this.getProducts():this.getCategoryProducts(value)
+  // }
+
+  cat:string = 'all';
   filterCategory(event:any){
-    let value = event.target.value;
-    (value == 'all')?this.getProducts():this.getCategoryProducts(value)
+    console.log(event);
+    (event == 'all')?this.getProducts():this.getCategoryProducts(event)
+    this.cat = event
   }
 
 

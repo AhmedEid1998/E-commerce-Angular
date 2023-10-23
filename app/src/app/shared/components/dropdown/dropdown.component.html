@@ -1,7 +1,25 @@
 
 
-<label for="" class="my-1">{{title}} :</label>
-<select class="form-control" (change)="filterData($event)">
+<!-- <label for="" class="mt-5">{{title}} :</label>
+<select class="form-select" (change)="filterData($event)">
     <option value="all" selected >All</option>
     <option value="{{item}}" *ngFor="let item of data">{{item}}</option>
-</select>
+</select> -->
+
+<nav>
+    <ul>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-1"></div>
+                <div class="col-lg-2">
+                    <li (click)="filterData('all')">All</li>
+                </div>
+                <div class="col-lg-2" *ngFor="let item of data" (click)="filterData(item)">
+                    <li>
+                        {{item | titlecase}}
+                    </li>                    
+                </div>
+            </div>
+        </div>
+    </ul>
+</nav>

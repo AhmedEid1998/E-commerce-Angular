@@ -1,13 +1,16 @@
 
 form{
-    background-color: rgb(215, 207, 207) !important;
-    padding: 30px;
-    border-radius: 20px;
+    // background-color: rgb(215, 207, 207) !important;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid 1px rgb(215, 207, 207);
     width:70%;
 }
 h2{
     color: #950b0b;
     width:70%;
+    font-weight: normal;
 }
 .alert{
     width: 70% ;

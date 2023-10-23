@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { FormsModule } from '@angular/forms';
 import { RegistrationModule } from '../registration/registration.module';
 import { NotfoundComponent } from './components/notfound/notfound.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
@@ -18,6 +19,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     DropdownComponent,
     ProductsComponent,
     NotfoundComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
     SpinnerComponent,
     DropdownComponent,
     ProductsComponent,
+    FooterComponent
 
   ]
 })

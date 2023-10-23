@@ -1,9 +1,12 @@
 
+
+<app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown>
+<h1 *ngIf="cat != 'all'" class="catTitlt">{{cat | titlecase}}</h1>
+
 <div class="mt-5">
 
-
     <div class="my-2 w-25">
-        <app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown>
+        <!-- <app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown> -->
     </div>
 
 

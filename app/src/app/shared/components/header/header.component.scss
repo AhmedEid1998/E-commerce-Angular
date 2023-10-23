@@ -42,8 +42,17 @@ nav{
         }
 
         .active{
-            color: #440606 !important;
-            background-color: rgb(215, 207, 207);
+            color: rgb(215, 207, 207) !important;
+            position: relative;
+            &::before{
+                content: '';
+                height: 2px;
+                background-color: rgb(215, 207, 207);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
         }
     }
 

@@ -39,7 +39,7 @@
 
 
 <div class="alert alert-danger mt-5 h4" *ngIf="dontHaveProducts">
-    You don't have any products in your cart !
+   <p class="m-0 ">You don't have any products in your cart !</p> 
 </div>
 
 <div class="cartBox marg py-3">
@@ -53,8 +53,8 @@
     </div>
 
     <div class="row cart-row p-1 rounded-5 mt-5" *ngFor="let product of cartProducts let index = index let isEven = even"
-                            [style.backgroundColor]="isEven?'#efebeb':''">
-
+                            [style.backgroundColor]="isEven?'#f4f4f4':''">
+                             <!-- #efebeb f6f6f6 -->
         <div class="col-lg-4 my-2 d-flex justify-content-center align-items-center">
             <div class="d-flex justify-content-center align-items-center w-100">
                 <img [src]="product.item.image">
