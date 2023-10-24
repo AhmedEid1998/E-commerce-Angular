@@ -1,0 +1,111 @@
+nav {
+  background: linear-gradient(to right, #950b0b, #440606);
+  color: #fff;
+}
+nav .content {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 5px 0;
+}
+nav .content .logo {
+  cursor: pointer;
+}
+nav .content ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+}
+nav .content ul li {
+  cursor: pointer;
+  font-size: 22px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 10px;
+  padding: 3px 6px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+nav .content ul li:hover {
+  color: #440606 !important;
+  background-color: rgb(215, 207, 207);
+}
+nav .content .regist {
+  width: 15% !important;
+}
+nav .content .active {
+  color: rgb(215, 207, 207) !important;
+  position: relative;
+}
+nav .content .active::before {
+  content: "";
+  height: 2px;
+  background-color: rgb(215, 207, 207);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+nav .hamburger {
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  nav .hamburger {
+    display: block;
+    cursor: pointer;
+    transition: 1s !important;
+  }
+  nav .hamburger .line {
+    width: 30px;
+    height: 3px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s ease;
+  }
+  nav .hamburger:hover .line {
+    background-color: rgb(215, 207, 207);
+  }
+  nav .l1x {
+    transform: translateX(15%);
+  }
+  nav .l2x {
+    transform: translateX(-15%);
+  }
+  nav .l3x {
+    transform: translateX(15%);
+  }
+  nav .nav-bar {
+    height: 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #950b0b, #440606);
+    width: 70%;
+    margin: auto;
+    border-radius: 25px;
+    transition: 0.3s ease;
+    overflow: hidden;
+  }
+  nav .nav-bar ul {
+    display: none;
+    padding-top: 20px;
+    position: absolute;
+  }
+  nav .nav-bar ul li {
+    margin-bottom: 12px;
+    transition: 0.5s ease;
+  }
+  nav .nav-bar ul li:hover {
+    background-color: rgb(215, 207, 207) !important;
+    border-radius: 10px;
+  }
+  nav .nav-bar.clicked {
+    height: 130px;
+  }
+  nav .nav-bar.clicked ul {
+    display: block;
+  }
+}/*# sourceMappingURL=header.component.css.map */

@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  font-family: cursive;
+}
+
+body {
+  padding: 0;
+  margin: 0 !important;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(149, 11, 11);
+}
+
+*::-webkit-scrollbar-button {
+  background-color: rgb(149, 11, 11);
+  width: 10px;
+}/*# sourceMappingURL=styles.css.map */

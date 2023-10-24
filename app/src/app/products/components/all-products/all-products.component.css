@@ -1,0 +1,37 @@
+.home .slidImgParnt {
+  height: 100vh;
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.home .slidImgParnt .content {
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.home .slidImgParnt .content .txt {
+  background-color: green;
+  padding-left: 20px;
+}
+.home .slidImgParnt1 {
+  background-image: url(./../../../../assets/bg5.jpeg);
+}
+.home .slidImgParnt2 {
+  background-image: url(./../../../../assets/bg6.jpg);
+}
+.home .slidImgParnt3 {
+  background-image: url(./../../../../assets/bg8.jpeg);
+}
+
+.marg {
+  margin-bottom: 110px !important;
+}
+
+.catTitlt {
+  text-align: center;
+  margin-top: 30px;
+}/*# sourceMappingURL=all-products.component.css.map */

@@ -1,26 +1,95 @@
 
-
-<app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown>
-<h1 *ngIf="cat != 'all'" class="catTitlt">{{cat | titlecase}}</h1>
-
-<div class="mt-5">
-
-    <div class="my-2 w-25">
-        <!-- <app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown> -->
-    </div>
-
-
-    <div *ngIf="err" class="alert alert-danger">{{err}}</div>
-
-    
-    <div class="row marg my-5" *ngIf="!loading">
-        <div *ngFor="let product of products" class ="col-lg-3 col-md-6 col-sm-12">
-            <app-products [data]="product" (item)="addCart($event)"></app-products>
+<section class="home vh-100 ">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <div class="btns-slide">            
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
         </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active slidImgParnt slidImgParnt1">
+            <div class="content">
+              <div class="col-lg-4 col-md-6 txt">
+                <h2 class="banner-title">Summer Collection</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="btn d-flex align-items-center">Shop it now 
+                    <i class="icon fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="./../../../../assets/bg3.jpg" class="d-block slidImg" alt="..."> -->
+          </div>
+          <div class="carousel-item slidImgParnt slidImgParnt2">
+            <div class="content">
+              <div class="col-lg-4 col-md-6 txt">
+                <h2 class="banner-title">Summer Collection</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.</p>
+                <div class="btn-wrap">
+                  <a href="#" class="btn d-flex align-items-center">Shop it now 
+                    <i class="icon fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="./../../../../assets/bg2.jpg" class="d-block slidImg" alt="..."> -->
+          </div>
+          <div class="carousel-item slidImgParnt slidImgParnt3">
+            <div class="content">
+              <div class="col-lg-4 col-md-6 txt">
+                <h2 class="banner-title">Summer Collection</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero ipsum enim pharetra hac.</p>
+                <div class="btn-wrap">
+                  <a href="##" class="btn d-flex align-items-center">Shop it now 
+                    <i class="icon fa-solid fa-arrow-right-long"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- <img src="./../../../../assets/bg1.jpg" class="d-block slidImg" alt="..."> -->
+          </div>
+        </div>
+
+        <button class="carousel-control-prev btnSlid prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span> -->
+          <i class="fa-solid fa-arrow-left-long icon"></i>
+        </button>
+        <button class="carousel-control-next btnSlid next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <!-- <span class="carousel-control-next-icon">ahmed</span>
+          <span class="visually-hidden">Next</span> -->
+          <i class="fa-solid fa-arrow-right-long icon"></i>
+        </button>
+      </div>
+</section>
+
+<div class="container pt-5">
+    <app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown>
+    <h1 *ngIf="cat != 'all'" class="catTitlt">{{cat | titlecase}}</h1>
+    
+    <div class="mt-5">
+    
+        <!-- <div class="my-2 w-25">
+            <app-dropdown [title]="'Category'" [data]="categorys" (filtering)="filterCategory($event)" ></app-dropdown>
+        </div> -->
+    
+    
+        <div *ngIf="err" class="alert alert-danger">{{err}}</div>
+    
+        
+        <div class="row marg my-5" *ngIf="!loading">
+            <div *ngFor="let product of products" class ="col-lg-3 col-md-6 col-sm-12">
+                <app-products [data]="product" (item)="addCart($event)"></app-products>
+            </div>
+        </div>
+    
     </div>
-
-</div>
-
-<div *ngIf="loading">
-    <app-spinner></app-spinner>
+    
+    <div *ngIf="loading">
+        <app-spinner></app-spinner>
+    </div>
 </div>

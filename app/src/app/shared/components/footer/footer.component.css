@@ -1,0 +1,42 @@
+footer {
+  background: linear-gradient(to right, #950b0b, #440606);
+  margin: 0 0;
+  padding: 10px 0;
+}
+footer .container {
+  padding: 20px 20px;
+}
+footer .container h3 {
+  color: white;
+  cursor: context-menu;
+}
+footer .container ul {
+  margin-top: 10px;
+}
+footer .container ul li {
+  list-style: none;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  transition: 0.3s ease-in-out;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+}
+footer .container ul li:hover {
+  color: rgb(215, 207, 207);
+  transform: translateX(10px);
+}
+footer .container .copRigh p {
+  text-align: center;
+  font-size: 1.4rem;
+  color: white;
+}
+footer .container .copRigh p span a {
+  color: #6da7ff;
+  transition: 0.2s ease-in-out;
+}
+footer .container .copRigh p span a:hover {
+  color: #0d6efd;
+}/*# sourceMappingURL=footer.component.css.map */
